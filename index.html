@@ -16,6 +16,7 @@
         }
 
         body {
+            background-color: transparent;
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
             font-size: 14px;
             color: #000;
@@ -42,6 +43,11 @@
 </head>
 
 <body>
+    <div>
+        <button id="btn_1">change transparent</button>
+        <button id="btn_2">change rgba(0,0,0,0)</button>
+        <button id="btn_3">change blue</button>
+    </div>
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -80,6 +86,18 @@
 
         function changeBackgroundColor(color) {
             document.body.style.backgroundColor = color;
+        }
+
+        document.getElementById("btn_1").onclick = () => {
+            document.body.style.backgroundColor = "transparent";
+        }
+
+        document.getElementById("btn_2").onclick = () => {
+            document.body.style.backgroundColor = "rgba(0,0,0,0)";
+        }
+
+        document.getElementById("btn_1").onclick = () => {
+            document.body.style.backgroundColor = "blue";
         }
     </script>
 </body>
